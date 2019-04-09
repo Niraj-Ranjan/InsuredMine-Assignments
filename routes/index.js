@@ -188,16 +188,32 @@ query6.exec(function (err, PolicyInfo) {
 }).post('/addpolicyinfodata', function (req, res) {
 
     var obj = JSON.stringify(req.body);
-    console.log(obj);
+    //console.log(obj);
 
     var jsonObj = JSON.parse(obj);
-    console.log(jsonObj);
-
+   // console.log(jsonObj);
     var policyinfo = new PolicyInfo({
         PolicyStartDate: jsonObj.PolicyStartDate,
         PolicyEndDate: jsonObj.PolicyEndDate,
-        PolicyNumber: jsonObj.PolicyNumber
+        PolicyNumber: jsonObj.PolicyNumber,
+        PolicyMode: jsonObj.PolicyMode,
+        PolicyType : jsonObj.PolicyType,
+        users: [{
+            _id: new mongoose.Types.ObjectId()
+        }],
+        category: [{
+            _id: new mongoose.Types.ObjectId()
+        }]
+        ,
+        carrier: [{
+            _id: new mongoose.Types.ObjectId()
+        }]
+    
+        
     });
+
+    console.log(policyinfo);
+    
 
     policyinfo.save(function (error) {
         console.log(policyinfo);
