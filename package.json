@@ -13,7 +13,7 @@
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.4",
     "datatables": "^1.10.18",
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.10.22",
     "datatables.net-dt": "^1.10.19",
     "datatables.net-editor": "^1.6.5",
     "ejs": "^2.6.1",
